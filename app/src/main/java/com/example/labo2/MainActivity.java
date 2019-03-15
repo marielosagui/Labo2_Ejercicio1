@@ -7,13 +7,17 @@ import android.view.View;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+private LinearLayout mLinearLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mLinearLayout = findViewById(R.id.ll1);
+        mLinearLayout = findViewById(R.id.bt_contact);
+
+        txt1 =findViewById(R.id.Edit_Text1);
+        txt2 =findViewById(R.id.Edit_Text2);
 
         btn1=findViewById(R.id.btn1);
 
