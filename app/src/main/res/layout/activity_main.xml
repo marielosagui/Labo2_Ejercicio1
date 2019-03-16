@@ -9,33 +9,36 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/et_name"
+        android:id="@+id/user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="Ejemplo" />
+        android:hint="Usuario" />
 
     <EditText
-        android:id="@+id/et_name"
+        android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="Ejemplo" />
+        android:hint="Contraseña" />
 
     <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="8dp"
-        android:onClick="displayName"
         android:text="ENVIAR"
-        android:b/>
+        android:background="#0ff"/>
 
     <TextView
+        android:id="@+id/cajaEmpty"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:gravity="center">
+        android:layout_marginTop="30dp"
+        android:paddingTop="20dp"
+        android:gravity="center"
+        android:textColor="#000"/>
 
 
 </LinearLayout>

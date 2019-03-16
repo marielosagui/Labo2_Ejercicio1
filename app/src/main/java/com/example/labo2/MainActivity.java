@@ -1,39 +1,53 @@
 package com.example.labo2;
-
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-private LinearLayout mLinearLayout;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+public class MainActivity extends AppCompatActivity implements View.OnClickListener, View.OnLongClickListener {
 
-        mLinearLayout = findViewById(R.id.bt_contact);
+        EditText user, password;
+        Button button;
+        TextView caja;
 
-        txt1 =findViewById(R.id.Edit_Text1);
-        txt2 =findViewById(R.id.Edit_Text2);
 
-        btn1=findViewById(R.id.btn1);
 
-        btn1.setOnCLickListener(this)
+        @Override
 
-    }
+        protected void onCreate(Bundle savedInstanceState) {
 
-    @Override
-    public void onClick(View v) {
-        int viewId = v.getId();
-        Log.i(tag:"id", msg:viewId + "");
-        switch (viewId){
-            case R.id.btn1;
-                Toast.makeText(context:MainActivity.this , text "btn1", Toast.LENGTH_SHORT).show();
-                break;
+            super.onCreate(savedInstanceState);
+
+            setContentView(R.layout.activity_main);
+
+
+
+            user = findViewById(R.id.user);
+
+            password = findViewById(R.id.password);
+            button = findViewById(R.id.button);
+            caja = findViewById(R.id.cajaEmpty);
+
+            button.setOnClickListener(this);
+            button.setOnLongClickListener(this);
         }
 
+        @Override
+        public void onClick(View v) {
+            caja.setText(user.getText());
+
+        }
+
+
+        @Override
+
+        public boolean onLongClick(View v) {
+
+            caja.setText(password.getText());
+
+            return false;
+        }
     }
-}
