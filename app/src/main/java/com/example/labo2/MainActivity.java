@@ -11,9 +11,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         EditText user, password;
         Button button;
-        TextView caja;
-
-
+        TextView texto;
 
         @Override
 
@@ -29,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             password = findViewById(R.id.password);
             button = findViewById(R.id.button);
-            caja = findViewById(R.id.cajaEmpty);
+            texto= findViewById(R.id.textEmpty);
 
             button.setOnClickListener(this);
             button.setOnLongClickListener(this);
@@ -37,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         @Override
         public void onClick(View v) {
-            caja.setText(user.getText());
+            texto.setText(user.getText());
 
         }
 
@@ -46,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         public boolean onLongClick(View v) {
 
-            caja.setText(password.getText());
+            texto.setText(password.getText());
 
             return false;
         }
